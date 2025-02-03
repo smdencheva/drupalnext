@@ -1,0 +1,11 @@
+name: nextdrupal
+recipe: drupal8
+
+config:
+  php: '8.3'
+  via: nginx
+  webroot: ./web
+
+services:
+  myservice:
+    type: mysql:8.0
