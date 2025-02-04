@@ -1,0 +1,39 @@
+diff --git a/src/EventSubscriber/RouterPathTranslatorSubscriber.php b/src/EventSubscriber/RouterPathTranslatorSubscriber.php
+index fa156a0..c29403e 100644
+--- a/src/EventSubscriber/RouterPathTranslatorSubscriber.php
++++ b/src/EventSubscriber/RouterPathTranslatorSubscriber.php
+@@ -12,6 +12,7 @@ use Drupal\Core\Entity\EntityMalformedException;
+ use Drupal\Core\Entity\EntityRepositoryInterface;
+ use Drupal\Core\Entity\TranslatableInterface;
+ use Drupal\Core\Extension\ModuleHandlerInterface;
++use Drupal\Core\Language\LanguageManagerInterface;
+ use Drupal\language\ConfigurableLanguageManagerInterface;
+ use Drupal\Core\Routing\RouteObjectInterface;
+ use Drupal\Core\StringTranslation\StringTranslationTrait;
+@@ -79,7 +80,7 @@ class RouterPathTranslatorSubscriber implements EventSubscriberInterface {
+   /**
+    * The language manager.
+    *
+-   * @var \Drupal\language\ConfigurableLanguageManagerInterface
++   * @var \Drupal\Core\Language\LanguageManagerInterface
+    */
+   protected $languageManager;
+ 
+@@ -112,7 +113,7 @@ class RouterPathTranslatorSubscriber implements EventSubscriberInterface {
+    *   The config factory.
+    * @param \Drupal\path_alias\AliasManagerInterface $aliasManager
+    *   The alias manager.
+-   * @param \Drupal\language\ConfigurableLanguageManagerInterface $language_manager
++   * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
+    *   The language manager.
+    * @param \Drupal\Core\Entity\EntityRepositoryInterface $entity_repository
+    *   The entity repository.
+@@ -124,7 +125,7 @@ class RouterPathTranslatorSubscriber implements EventSubscriberInterface {
+     ModuleHandlerInterface $module_handler,
+     ConfigFactoryInterface $config_factory,
+     AliasManagerInterface $aliasManager,
+-    ConfigurableLanguageManagerInterface $language_manager,
++    LanguageManagerInterface $language_manager,
+     EntityRepositoryInterface $entity_repository,
+   ) {
+     $this->container = $container;
