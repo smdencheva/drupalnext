@@ -44,7 +44,8 @@
     "extra": {
         "patches": {
             "drupal/decoupled_router": {
-                "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2024-10-22/decoupled_router-3111456-resolve-langcode-issue-78--external-redirects.patch"
+                "Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2024-10-22/decoupled_router-3111456-resolve-langcode-issue-78--external-redirects.patch",
+                "Get propper Language switcher interface for Drupal 11": "./patches/decoupled_router_language_switcher.patch"
             }
         },
         "drupal-scaffold": {
